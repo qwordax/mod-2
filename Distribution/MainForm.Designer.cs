@@ -6,6 +6,7 @@ namespace Distribution
 {
     public partial class MainForm
     {
+        private GroupBox parameterBox;
         private GroupBox distributionBox;
 
         private Chart chart;
@@ -17,6 +18,7 @@ namespace Distribution
 
         private void InitializeComponent()
         {
+            parameterBox = new GroupBox();
             distributionBox = new GroupBox();
 
             chart = new Chart();
@@ -26,17 +28,28 @@ namespace Distribution
             generateButton = new Button();
             clearButton = new Button();
 
+            parameterBox.SuspendLayout();
             distributionBox.SuspendLayout();
 
             SuspendLayout();
 
             //
+            // parameterBox.
+            //
+            parameterBox.Location = new Point(5, 5);
+            parameterBox.Margin = new Padding(0, 0, 0, 0);
+            parameterBox.Name = "parameterBox";
+            parameterBox.Size = new Size(300, 95);
+            parameterBox.TabIndex = 0;
+            parameterBox.Text = "Parameters";
+
+            //
             // distributionBox.
             //
-            distributionBox.Location = new Point(5, 5);
+            distributionBox.Location = new Point(5, 105);
             distributionBox.Margin = new Padding(0, 0, 0, 0);
             distributionBox.Name = "distributionBox";
-            distributionBox.Size = new Size(300, 590);
+            distributionBox.Size = new Size(300, 490);
             distributionBox.TabIndex = 0;
             distributionBox.Text = "Distributions";
 
@@ -94,7 +107,11 @@ namespace Distribution
             MinimizeBox = false;
             Text = "Distribution";
 
-            Controls.Add(distributionBox);
+            Controls.AddRange(new GroupBox[]
+            {
+                parameterBox,
+                distributionBox
+            });
 
             Controls.Add(chart);
 
@@ -104,6 +121,7 @@ namespace Distribution
                 clearButton
             });
 
+            parameterBox.ResumeLayout(true);
             distributionBox.ResumeLayout(true);
 
             ResumeLayout(true);
