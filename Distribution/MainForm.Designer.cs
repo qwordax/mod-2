@@ -16,6 +16,12 @@ namespace Distribution
         private Button generateButton;
         private Button clearButton;
 
+        private Label label1;
+        private Label label2;
+
+        private NumericUpDown upDown1;
+        private NumericUpDown upDown2;
+
         private void InitializeComponent()
         {
             parameterBox = new GroupBox();
@@ -28,6 +34,12 @@ namespace Distribution
             generateButton = new Button();
             clearButton = new Button();
 
+            label1 = new Label();
+            label2 = new Label();
+
+            upDown1 = new NumericUpDown();
+            upDown2 = new NumericUpDown();
+
             parameterBox.SuspendLayout();
             distributionBox.SuspendLayout();
 
@@ -36,6 +48,14 @@ namespace Distribution
             //
             // parameterBox.
             //
+            parameterBox.Controls.AddRange(new Control[]
+            {
+                label1,
+                label2,
+                upDown1,
+                upDown2
+            });
+
             parameterBox.Location = new Point(5, 5);
             parameterBox.Margin = new Padding(0, 0, 0, 0);
             parameterBox.Name = "parameterBox";
@@ -96,6 +116,48 @@ namespace Distribution
             clearButton.Size = new Size(440, 30);
             clearButton.TabIndex = 2;
             clearButton.Text = "Clear";
+
+            //
+            // label1.
+            //
+            label1.Font = new Font(label1.Font, FontStyle.Italic);
+            label1.Location = new Point(5, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(60, 30);
+            label1.Text = "N";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // label2.
+            //
+            label2.Font = new Font(label2.Font, FontStyle.Italic);
+            label2.Location = new Point(5, 60);
+            label2.Name = "label2";
+            label2.Size = new Size(60, 30);
+            label2.Text = "M";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // upDown1.
+            //
+            upDown1.Location = new Point(70, 25);
+            upDown1.Maximum = 100_000_000;
+            upDown1.Minimum = 100;
+            upDown1.Name = "upDown1";
+            upDown1.Size = new Size(225, 30);
+
+            upDown1.Value = 10_000;
+
+            //
+            // upDown2.
+            //
+            upDown2.Location = new Point(70, 60);
+            upDown2.Maximum = 1_000;
+            upDown2.Minimum = 10;
+            upDown2.Name = "upDown2";
+            upDown2.Size = new Size(225, 30);
+
+            upDown2.Value = 100;
 
             //
             // MainForm.
