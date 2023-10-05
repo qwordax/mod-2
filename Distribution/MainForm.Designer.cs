@@ -13,6 +13,8 @@ namespace Distribution
         private ChartArea chartArea;
         private Series chartSeries;
 
+        private CheckBox checkBox;
+
         private Button generateButton;
         private Button clearButton;
 
@@ -37,6 +39,8 @@ namespace Distribution
             chart = new Chart();
             chartArea = new ChartArea();
             chartSeries = new Series();
+
+            checkBox = new CheckBox();
 
             generateButton = new Button();
             clearButton = new Button();
@@ -93,7 +97,7 @@ namespace Distribution
             distributionBox.Location = new Point(5, 105);
             distributionBox.Margin = new Padding(0, 0, 0, 0);
             distributionBox.Name = "distributionBox";
-            distributionBox.Size = new Size(300, 490);
+            distributionBox.Size = new Size(300, 455);
             distributionBox.TabIndex = 0;
             distributionBox.Text = "Distributions";
 
@@ -118,6 +122,16 @@ namespace Distribution
             // chartSeries.
             //
             chartSeries.Name = "chartSeries";
+
+            //
+            // checkBox.
+            //
+            checkBox.CheckedChanged += CheckBoxCheckedChange;
+            checkBox.Location = new Point(5, 565);
+            checkBox.Margin = new Padding(0, 0, 0, 0);
+            checkBox.Name = "checkBox";
+            checkBox.Size = new Size(300, 30);
+            checkBox.Text = "Show Labels";
 
             //
             // generateButton.
@@ -279,6 +293,8 @@ namespace Distribution
             });
 
             Controls.Add(chart);
+
+            Controls.Add(checkBox);
 
             Controls.AddRange(new Button[]
             {

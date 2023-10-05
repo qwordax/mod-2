@@ -10,6 +10,11 @@ namespace Distribution
             InitializeComponent();
         }
 
+        private void CheckBoxCheckedChange(Object sender, EventArgs args)
+        {
+
+        }
+
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
             Text = "Distribution — Generating…";
