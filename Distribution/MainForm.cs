@@ -12,12 +12,14 @@ namespace Distribution
 
         private void GenerateButtonClick(Object sender, EventArgs args)
         {
+            Text = "Distribution — Generating…";
 
+            Text = "Distribution — Done!";
         }
 
         private void ClearButtonClick(Object sender, EventArgs args)
         {
-
+            Text = "Distribution";
         }
     }
 }
