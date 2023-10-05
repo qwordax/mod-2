@@ -7,9 +7,15 @@ namespace Distribution
     {
         private GroupBox distributionBox;
 
+        private Button generateButton;
+        private Button clearButton;
+
         private void InitializeComponent()
         {
             distributionBox = new GroupBox();
+
+            generateButton = new Button();
+            clearButton = new Button();
 
             distributionBox.SuspendLayout();
 
@@ -26,6 +32,28 @@ namespace Distribution
             distributionBox.Text = "Distributions";
 
             //
+            // generateButton.
+            //
+            generateButton.Click += GenerateButtonClick;
+            generateButton.Location = new Point(310, 565);
+            generateButton.Margin = new Padding(0, 0, 0, 0);
+            generateButton.Name = "generateButton";
+            generateButton.Size = new Size(440, 30);
+            generateButton.TabIndex = 1;
+            generateButton.Text = "Generate";
+
+            //
+            // clearButton.
+            //
+            clearButton.Click += ClearButtonClick;
+            clearButton.Location = new Point(755, 565);
+            clearButton.Margin = new Padding(0, 0, 0, 0);
+            clearButton.Name = "clearButton";
+            clearButton.Size = new Size(440, 30);
+            clearButton.TabIndex = 2;
+            clearButton.Text = "Clear";
+
+            //
             // MainForm.
             //
             AutoScaleMode = AutoScaleMode.Font;
@@ -36,6 +64,12 @@ namespace Distribution
             Text = "Distribution";
 
             Controls.Add(distributionBox);
+
+            Controls.AddRange(new Button[]
+            {
+                generateButton,
+                clearButton
+            });
 
             distributionBox.ResumeLayout(true);
 

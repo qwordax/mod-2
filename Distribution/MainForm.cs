@@ -1,3 +1,4 @@
+using System;
 using System.Windows.Forms;
 
 namespace Distribution
@@ -7,6 +8,16 @@ namespace Distribution
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void GenerateButtonClick(Object sender, EventArgs args)
+        {
+
+        }
+
+        private void ClearButtonClick(Object sender, EventArgs args)
+        {
+
         }
     }
 }
