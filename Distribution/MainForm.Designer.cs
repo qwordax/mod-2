@@ -1,5 +1,6 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Distribution
 {
@@ -7,12 +8,20 @@ namespace Distribution
     {
         private GroupBox distributionBox;
 
+        private Chart chart;
+        private ChartArea chartArea;
+        private Series chartSeries;
+
         private Button generateButton;
         private Button clearButton;
 
         private void InitializeComponent()
         {
             distributionBox = new GroupBox();
+
+            chart = new Chart();
+            chartArea = new ChartArea();
+            chartSeries = new Series();
 
             generateButton = new Button();
             clearButton = new Button();
@@ -30,6 +39,28 @@ namespace Distribution
             distributionBox.Size = new Size(300, 590);
             distributionBox.TabIndex = 0;
             distributionBox.Text = "Distributions";
+
+            //
+            // chart.
+            //
+            chart.ChartAreas.Add(chartArea);
+            chart.Location = new Point(310, 15);
+            chart.Margin = new Padding(0, 0, 0, 0);
+            chart.Name = "chart";
+            chart.Series.Add(chartSeries);
+            chart.Size = new Size(885, 545);
+            chart.TabIndex = 0;
+            chart.TabStop = false;
+
+            //
+            // chartArea.
+            //
+            chartArea.Name = "chartArea";
+
+            //
+            // chartSeries.
+            //
+            chartSeries.Name = "chartSeries";
 
             //
             // generateButton.
@@ -64,6 +95,8 @@ namespace Distribution
             Text = "Distribution";
 
             Controls.Add(distributionBox);
+
+            Controls.Add(chart);
 
             Controls.AddRange(new Button[]
             {
