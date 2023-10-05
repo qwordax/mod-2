@@ -75,7 +75,6 @@ namespace Distribution
             });
 
             parameterBox.Location = new Point(5, 5);
-            parameterBox.Margin = new Padding(0, 0, 0, 0);
             parameterBox.Name = "parameterBox";
             parameterBox.Size = new Size(300, 95);
             parameterBox.Text = "Parameters";
@@ -94,7 +93,6 @@ namespace Distribution
             });
 
             distributionBox.Location = new Point(5, 105);
-            distributionBox.Margin = new Padding(0, 0, 0, 0);
             distributionBox.Name = "distributionBox";
             distributionBox.Size = new Size(300, 455);
             distributionBox.Text = "Distributions";
@@ -104,7 +102,6 @@ namespace Distribution
             //
             chart.ChartAreas.Add(chartArea);
             chart.Location = new Point(310, 15);
-            chart.Margin = new Padding(0, 0, 0, 0);
             chart.Name = "chart";
             chart.Series.Add(chartSeries);
             chart.Size = new Size(885, 545);
@@ -125,7 +122,6 @@ namespace Distribution
             //
             checkBox.CheckedChanged += CheckBoxCheckedChange;
             checkBox.Location = new Point(5, 565);
-            checkBox.Margin = new Padding(0, 0, 0, 0);
             checkBox.Name = "checkBox";
             checkBox.Size = new Size(300, 30);
             checkBox.Text = "Show Labels";
@@ -135,7 +131,6 @@ namespace Distribution
             //
             generateButton.Click += GenerateButtonClick;
             generateButton.Location = new Point(310, 565);
-            generateButton.Margin = new Padding(0, 0, 0, 0);
             generateButton.Name = "generateButton";
             generateButton.Size = new Size(440, 30);
             generateButton.Text = "Generate";
@@ -145,7 +140,6 @@ namespace Distribution
             //
             clearButton.Click += ClearButtonClick;
             clearButton.Location = new Point(755, 565);
-            clearButton.Margin = new Padding(0, 0, 0, 0);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(440, 30);
             clearButton.Text = "Clear";
