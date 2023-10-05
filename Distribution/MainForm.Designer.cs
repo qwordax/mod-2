@@ -78,7 +78,6 @@ namespace Distribution
             parameterBox.Margin = new Padding(0, 0, 0, 0);
             parameterBox.Name = "parameterBox";
             parameterBox.Size = new Size(300, 95);
-            parameterBox.TabIndex = 0;
             parameterBox.Text = "Parameters";
 
             //
@@ -98,7 +97,6 @@ namespace Distribution
             distributionBox.Margin = new Padding(0, 0, 0, 0);
             distributionBox.Name = "distributionBox";
             distributionBox.Size = new Size(300, 455);
-            distributionBox.TabIndex = 0;
             distributionBox.Text = "Distributions";
 
             //
@@ -110,7 +108,6 @@ namespace Distribution
             chart.Name = "chart";
             chart.Series.Add(chartSeries);
             chart.Size = new Size(885, 545);
-            chart.TabIndex = 0;
             chart.TabStop = false;
 
             //
@@ -141,7 +138,6 @@ namespace Distribution
             generateButton.Margin = new Padding(0, 0, 0, 0);
             generateButton.Name = "generateButton";
             generateButton.Size = new Size(440, 30);
-            generateButton.TabIndex = 1;
             generateButton.Text = "Generate";
 
             //
@@ -152,7 +148,6 @@ namespace Distribution
             clearButton.Margin = new Padding(0, 0, 0, 0);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(440, 30);
-            clearButton.TabIndex = 2;
             clearButton.Text = "Clear";
 
             //
@@ -208,7 +203,6 @@ namespace Distribution
             distButton1.Location = new Point(5, 25);
             distButton1.Name = "radioButton1";
             distButton1.Size = new Size(200, 30);
-            distButton1.TabIndex = 3;
             distButton1.Text = "Uniform";
 
             //
@@ -221,7 +215,6 @@ namespace Distribution
             distButton2.Location = new Point(5, 60);
             distButton2.Name = "radioButton2";
             distButton2.Size = new Size(200, 30);
-            distButton2.TabIndex = 3;
             distButton2.Text = "Gauss";
 
             //
@@ -234,7 +227,6 @@ namespace Distribution
             distButton3.Location = new Point(5, 95);
             distButton3.Name = "radioButton3";
             distButton3.Size = new Size(200, 30);
-            distButton3.TabIndex = 3;
             distButton3.Text = "Exponential";
 
             //
@@ -247,7 +239,6 @@ namespace Distribution
             distButton4.Location = new Point(5, 130);
             distButton4.Name = "radioButton4";
             distButton4.Size = new Size(200, 30);
-            distButton4.TabIndex = 3;
             distButton4.Text = "Gamma";
 
             //
@@ -260,7 +251,6 @@ namespace Distribution
             distButton5.Location = new Point(5, 165);
             distButton5.Name = "radioButton4";
             distButton5.Size = new Size(200, 30);
-            distButton5.TabIndex = 3;
             distButton5.Text = "Triangle";
 
             //
@@ -273,7 +263,6 @@ namespace Distribution
             distButton6.Location = new Point(5, 200);
             distButton6.Name = "radioButton4";
             distButton6.Size = new Size(200, 30);
-            distButton6.TabIndex = 3;
             distButton6.Text = "Simpson";
 
             //
