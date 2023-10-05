@@ -22,13 +22,12 @@ namespace Distribution
         private NumericUpDown upDown1;
         private NumericUpDown upDown2;
 
-        private RadioButton radioButton1;
-        private RadioButton radioButton2;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
-        private RadioButton radioButton5;
-        private RadioButton radioButton6;
-        private RadioButton radioButton7;
+        private RadioButton distButton1;
+        private RadioButton distButton2;
+        private RadioButton distButton3;
+        private RadioButton distButton4;
+        private RadioButton distButton5;
+        private RadioButton distButton6;
 
         private void InitializeComponent()
         {
@@ -48,13 +47,12 @@ namespace Distribution
             upDown1 = new NumericUpDown();
             upDown2 = new NumericUpDown();
 
-            radioButton1 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
-            radioButton5 = new RadioButton();
-            radioButton6 = new RadioButton();
-            radioButton7 = new RadioButton();
+            distButton1 = new RadioButton();
+            distButton2 = new RadioButton();
+            distButton3 = new RadioButton();
+            distButton4 = new RadioButton();
+            distButton5 = new RadioButton();
+            distButton6 = new RadioButton();
 
             parameterBox.SuspendLayout();
             distributionBox.SuspendLayout();
@@ -84,13 +82,12 @@ namespace Distribution
             //
             distributionBox.Controls.AddRange(new RadioButton[]
             {
-                radioButton1,
-                radioButton2,
-                radioButton3,
-                radioButton4,
-                radioButton5,
-                radioButton6,
-                radioButton7
+                distButton1,
+                distButton2,
+                distButton3,
+                distButton4,
+                distButton5,
+                distButton6
             });
 
             distributionBox.Location = new Point(5, 105);
@@ -187,96 +184,83 @@ namespace Distribution
             upDown2.Value = 100;
 
             //
-            // radioButton1.
+            // distButton1.
             //
-            radioButton1.Checked = true;
-            radioButton1.Font = new Font("Courier New",
+            distButton1.Checked = true;
+            distButton1.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton1.Location = new Point(5, 25);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(200, 30);
-            radioButton1.TabIndex = 3;
-            radioButton1.Text = "Uniform";
+            distButton1.Location = new Point(5, 25);
+            distButton1.Name = "radioButton1";
+            distButton1.Size = new Size(200, 30);
+            distButton1.TabIndex = 3;
+            distButton1.Text = "Uniform";
 
             //
-            // radioButton2.
+            // distButton2.
             //
-            radioButton2.Font = new Font("Courier New",
+            distButton2.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton2.Location = new Point(5, 60);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(200, 30);
-            radioButton2.TabIndex = 3;
-            radioButton2.Text = "Gauss";
+            distButton2.Location = new Point(5, 60);
+            distButton2.Name = "radioButton2";
+            distButton2.Size = new Size(200, 30);
+            distButton2.TabIndex = 3;
+            distButton2.Text = "Gauss";
 
             //
-            // radioButton3.
+            // distButton3.
             //
-            radioButton3.Font = new Font("Courier New",
+            distButton3.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton3.Location = new Point(5, 95);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(200, 30);
-            radioButton3.TabIndex = 3;
-            radioButton3.Text = "Exponential";
+            distButton3.Location = new Point(5, 95);
+            distButton3.Name = "radioButton3";
+            distButton3.Size = new Size(200, 30);
+            distButton3.TabIndex = 3;
+            distButton3.Text = "Exponential";
 
             //
-            // radioButton4.
+            // distButton4.
             //
-            radioButton4.Font = new Font("Courier New",
+            distButton4.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton4.Location = new Point(5, 130);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(200, 30);
-            radioButton4.TabIndex = 3;
-            radioButton4.Text = "Gamma";
+            distButton4.Location = new Point(5, 130);
+            distButton4.Name = "radioButton4";
+            distButton4.Size = new Size(200, 30);
+            distButton4.TabIndex = 3;
+            distButton4.Text = "Gamma";
 
             //
-            // radioButton5.
+            // distButton5.
             //
-            radioButton5.Font = new Font("Courier New",
+            distButton5.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton5.Location = new Point(5, 165);
-            radioButton5.Name = "radioButton4";
-            radioButton5.Size = new Size(200, 30);
-            radioButton5.TabIndex = 3;
-            radioButton5.Text = "TriangleMax";
+            distButton5.Location = new Point(5, 165);
+            distButton5.Name = "radioButton4";
+            distButton5.Size = new Size(200, 30);
+            distButton5.TabIndex = 3;
+            distButton5.Text = "Triangle";
 
             //
-            // radioButton6.
+            // distButton7.
             //
-            radioButton6.Font = new Font("Courier New",
+            distButton6.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            radioButton6.Location = new Point(5, 200);
-            radioButton6.Name = "radioButton4";
-            radioButton6.Size = new Size(200, 30);
-            radioButton6.TabIndex = 3;
-            radioButton6.Text = "TriangleMin";
-
-            //
-            // radioButton7.
-            //
-            radioButton7.Font = new Font("Courier New",
-                9,
-                FontStyle.Regular,
-                GraphicsUnit.Point);
-            radioButton7.Location = new Point(5, 235);
-            radioButton7.Name = "radioButton4";
-            radioButton7.Size = new Size(200, 30);
-            radioButton7.TabIndex = 3;
-            radioButton7.Text = "Simpson";
+            distButton6.Location = new Point(5, 200);
+            distButton6.Name = "radioButton4";
+            distButton6.Size = new Size(200, 30);
+            distButton6.TabIndex = 3;
+            distButton6.Text = "Simpson";
 
             //
             // MainForm.
