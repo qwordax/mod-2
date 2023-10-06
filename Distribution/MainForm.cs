@@ -70,7 +70,7 @@ namespace Distribution
 
             if (distributionButton5.Checked)
             {
-                distribution = new Triangle(generator, 75.0, 200.0);
+                distribution = new Triangular(generator, 75.0, 200.0);
 
                 expectE = (75.0 + 75.0 + 200.0) / 3.0;
                 expectV = (75.0 * 75.0 + 200.0 * 200.0 - 2 * 75.0 * 200.0) / 18.0;

@@ -438,7 +438,7 @@ namespace Distribution
             distributionButton5.Location = new Point(5, 165);
             distributionButton5.Name = "distributionButton5";
             distributionButton5.Size = new Size(200, 30);
-            distributionButton5.Text = "Triangle";
+            distributionButton5.Text = "Triangular";
 
             //
             // distributionButton6.

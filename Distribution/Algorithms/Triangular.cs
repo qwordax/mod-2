@@ -6,16 +6,16 @@ namespace Distribution.Algorithms
 {
     /// <summary>
     /// Represents a pseudorandom number generator based on
-    /// the triangle distribution.
+    /// the triangular distribution.
     /// </summary>
-    public class Triangle : IDistributable
+    public class Triangular : IDistributable
     {
         private IRandomable R { get; set; }
 
         private Double A { get; set; }
         private Double B { get; set; }
 
-        public Triangle(IRandomable r, Double a, Double b)
+        public Triangular(IRandomable r, Double a, Double b)
         {
             R = r;
             A = a;
