@@ -35,6 +35,9 @@ namespace Distribution
         private Label computedLabel1;
         private Label computedLabel2;
 
+        private TextBox computedTextBox1;
+        private TextBox computedTextBox2;
+
         private RadioButton distributionButton1;
         private RadioButton distributionButton2;
         private RadioButton distributionButton3;
@@ -72,6 +75,9 @@ namespace Distribution
 
             computedLabel1 = new Label();
             computedLabel2 = new Label();
+
+            computedTextBox1 = new TextBox();
+            computedTextBox2 = new TextBox();
 
             distributionButton1 = new RadioButton();
             distributionButton2 = new RadioButton();
@@ -125,7 +131,9 @@ namespace Distribution
             computedBox.Controls.AddRange(new Control[]
             {
                 computedLabel1,
-                computedLabel2
+                computedLabel2,
+                computedTextBox1,
+                computedTextBox2
             });
 
             computedBox.Location = new Point(5, 205);
@@ -297,6 +305,24 @@ namespace Distribution
             computedLabel2.Size = new Size(60, 30);
             computedLabel2.Text = "V";
             computedLabel2.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // computedTextBox1.
+            //
+            computedTextBox1.Location = new Point(70, 25);
+            computedTextBox1.Name = "computedTextBox1";
+            computedTextBox1.ReadOnly = true;
+            computedTextBox1.Size = new Size(225, 30);
+            computedTextBox1.TabStop = false;
+
+            //
+            // computedTextBox2.
+            //
+            computedTextBox2.Location = new Point(70, 60);
+            computedTextBox2.Name = "computedTextBox2";
+            computedTextBox2.ReadOnly = true;
+            computedTextBox2.Size = new Size(225, 30);
+            computedTextBox2.TabStop = false;
 
             //
             // distributionButton1.
