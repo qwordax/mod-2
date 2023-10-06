@@ -9,6 +9,7 @@ namespace Distribution
         private GroupBox parameterBox;
         private GroupBox expectedBox;
         private GroupBox computedBox;
+        private GroupBox generatorBox;
         private GroupBox distributionBox;
 
         private Chart chart;
@@ -50,6 +51,7 @@ namespace Distribution
             parameterBox = new GroupBox();
             expectedBox = new GroupBox();
             computedBox = new GroupBox();
+            generatorBox = new GroupBox();
             distributionBox = new GroupBox();
 
             chart = new Chart();
@@ -89,6 +91,7 @@ namespace Distribution
             parameterBox.SuspendLayout();
             expectedBox.SuspendLayout();
             computedBox.SuspendLayout();
+            generatorBox.SuspendLayout();
             distributionBox.SuspendLayout();
 
             SuspendLayout();
@@ -142,6 +145,14 @@ namespace Distribution
             computedBox.Text = "Computed";
 
             //
+            // generatorBox.
+            //
+            generatorBox.Location = new Point(5, 305);
+            generatorBox.Name = "generatorBox";
+            generatorBox.Size = new Size(300, 95);
+            generatorBox.Text = "Generators";
+
+            //
             // distributionBox.
             //
             distributionBox.Controls.AddRange(new Control[]
@@ -154,9 +165,9 @@ namespace Distribution
                 distributionButton6
             });
 
-            distributionBox.Location = new Point(5, 305);
+            distributionBox.Location = new Point(5, 405);
             distributionBox.Name = "distributionBox";
-            distributionBox.Size = new Size(300, 255);
+            distributionBox.Size = new Size(300, 305);
             distributionBox.Text = "Distributions";
 
             //
@@ -166,7 +177,7 @@ namespace Distribution
             chart.Location = new Point(310, 15);
             chart.Name = "chart";
             chart.Series.Add(chartSeries);
-            chart.Size = new Size(885, 545);
+            chart.Size = new Size(885, 695);
             chart.TabStop = false;
 
             //
@@ -190,7 +201,7 @@ namespace Distribution
             // checkBox.
             //
             checkBox.CheckedChanged += CheckBoxCheckedChange;
-            checkBox.Location = new Point(5, 565);
+            checkBox.Location = new Point(5, 715);
             checkBox.Name = "checkBox";
             checkBox.Size = new Size(300, 30);
             checkBox.Text = "Show Labels";
@@ -199,7 +210,7 @@ namespace Distribution
             // generateButton.
             //
             generateButton.Click += GenerateButtonClick;
-            generateButton.Location = new Point(310, 565);
+            generateButton.Location = new Point(310, 715);
             generateButton.Name = "generateButton";
             generateButton.Size = new Size(440, 30);
             generateButton.Text = "Generate";
@@ -208,7 +219,7 @@ namespace Distribution
             // clearButton.
             //
             clearButton.Click += ClearButtonClick;
-            clearButton.Location = new Point(755, 565);
+            clearButton.Location = new Point(755, 715);
             clearButton.Name = "clearButton";
             clearButton.Size = new Size(440, 30);
             clearButton.Text = "Clear";
@@ -408,7 +419,7 @@ namespace Distribution
             // MainForm.
             //
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 600);
+            ClientSize = new Size(1200, 750);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
@@ -419,6 +430,7 @@ namespace Distribution
                 parameterBox,
                 expectedBox,
                 computedBox,
+                generatorBox,
                 distributionBox
             });
 
@@ -435,6 +447,7 @@ namespace Distribution
             parameterBox.ResumeLayout(true);
             expectedBox.ResumeLayout(true);
             computedBox.ResumeLayout(true);
+            generatorBox.ResumeLayout(true);
             distributionBox.ResumeLayout(true);
 
             ResumeLayout(true);
