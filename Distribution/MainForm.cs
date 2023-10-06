@@ -15,7 +15,7 @@ namespace Distribution
 
         private void CheckBoxCheckedChange(Object sender, EventArgs args)
         {
-
+            chartSeries.IsValueShownAsLabel = checkBox.Checked;
         }
 
         private void GenerateButtonClick(Object sender, EventArgs args)
