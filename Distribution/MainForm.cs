@@ -60,6 +60,14 @@ namespace Distribution
                 expectV = 1 / (14.0 * 14.0);
             }
 
+            if (distributionButton4.Checked)
+            {
+                distribution = new Gamma(generator, 14.0, 8);
+
+                expectE = 8 / 14.0;
+                expectV = 8 / (14.0 * 14.0);
+            }
+
             UInt64 n = (UInt64)parameterUpDown1.Value;
 
             for (UInt64 i = 0; i < n; i++)
