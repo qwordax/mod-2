@@ -253,7 +253,7 @@ namespace Distribution
             parameterLabel2.Location = new Point(5, 60);
             parameterLabel2.Name = "parameterLabel2";
             parameterLabel2.Size = new Size(60, 30);
-            parameterLabel2.Text = "M";
+            parameterLabel2.Text = "K";
             parameterLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
@@ -285,7 +285,7 @@ namespace Distribution
             expectedLabel1.Location = new Point(5, 25);
             expectedLabel1.Name = "expectedLabel1";
             expectedLabel1.Size = new Size(60, 30);
-            expectedLabel1.Text = "E";
+            expectedLabel1.Text = "M";
             expectedLabel1.TextAlign = ContentAlignment.MiddleLeft;
 
             //
@@ -323,7 +323,7 @@ namespace Distribution
             computedLabel1.Location = new Point(5, 25);
             computedLabel1.Name = "computedLabel1";
             computedLabel1.Size = new Size(60, 30);
-            computedLabel1.Text = "E";
+            computedLabel1.Text = "M";
             computedLabel1.TextAlign = ContentAlignment.MiddleLeft;
 
             //

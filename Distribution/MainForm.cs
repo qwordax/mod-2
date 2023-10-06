@@ -100,20 +100,20 @@ namespace Distribution
             computedTextBox1.Text = String.Format("{0:0.000000}", computeE);
             computedTextBox2.Text = String.Format("{0:0.000000}", computeV);
 
-            UInt64 m = (UInt64)parameterUpDown2.Value;
+            UInt64 k = (UInt64)parameterUpDown2.Value;
 
-            UInt64[] counts = new UInt64[m];
+            UInt64[] counts = new UInt64[k];
 
             Double min = values.Min();
             Double max = values.Max();
 
             foreach (Double value in values)
             {
-                UInt64 index = (UInt64)Math.Floor(m * (value - min) / (max - min));
+                UInt64 index = (UInt64)Math.Floor(k * (value - min) / (max - min));
 
-                if (index >= m)
+                if (index >= k)
                 {
-                    index = m - 1;
+                    index = k - 1;
                 }
 
                 counts[index] += 1;
@@ -121,7 +121,7 @@ namespace Distribution
 
             chartSeries.Points.Clear();
 
-            for (UInt64 i = 0; i < m; i++)
+            for (UInt64 i = 0; i < k; i++)
             {
                 chartSeries.Points.AddXY(i, counts[i]);
             }
