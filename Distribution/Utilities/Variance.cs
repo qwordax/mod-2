@@ -12,11 +12,11 @@ namespace Distribution.Utilities
         {
             Double result = 0.0;
 
-            Double expect = Mean.Compute(values);
+            Double mean = Mean.Compute(values);
 
             foreach (Double value in values)
             {
-                result += (value - expect) * (value - expect);
+                result += (value - mean) * (value - mean);
             }
 
             return result / values.Count;
