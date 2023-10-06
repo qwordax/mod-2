@@ -29,6 +29,9 @@ namespace Distribution
         private Label expectedLabel1;
         private Label expectedLabel2;
 
+        private TextBox expectedTextBox1;
+        private TextBox expectedTextBox2;
+
         private Label computedLabel1;
         private Label computedLabel2;
 
@@ -63,6 +66,9 @@ namespace Distribution
 
             expectedLabel1 = new Label();
             expectedLabel2 = new Label();
+
+            expectedTextBox1 = new TextBox();
+            expectedTextBox2 = new TextBox();
 
             computedLabel1 = new Label();
             computedLabel2 = new Label();
@@ -103,7 +109,9 @@ namespace Distribution
             expectedBox.Controls.AddRange(new Control[]
             {
                 expectedLabel1,
-                expectedLabel2
+                expectedLabel2,
+                expectedTextBox1,
+                expectedTextBox2
             });
 
             expectedBox.Location = new Point(5, 105);
@@ -251,6 +259,24 @@ namespace Distribution
             expectedLabel2.Size = new Size(60, 30);
             expectedLabel2.Text = "V";
             expectedLabel2.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // expectedTextBox1.
+            //
+            expectedTextBox1.Location = new Point(70, 25);
+            expectedTextBox1.Name = "expectedTextBox1";
+            expectedTextBox1.ReadOnly = true;
+            expectedTextBox1.Size = new Size(225, 30);
+            expectedTextBox1.TabStop = false;
+
+            //
+            // expectedTextBox2.
+            //
+            expectedTextBox2.Location = new Point(70, 60);
+            expectedTextBox2.Name = "expectedTextBox2";
+            expectedTextBox2.ReadOnly = true;
+            expectedTextBox2.Size = new Size(225, 30);
+            expectedTextBox2.TabStop = false;
 
             //
             // computedLabel1.
