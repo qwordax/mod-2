@@ -91,7 +91,7 @@ namespace Distribution
                 values.Add(distribution.Next());
             }
 
-            Double computeE = Expectation.Compute(values);
+            Double computeE = Mean.Compute(values);
             Double computeV = Variation.Compute(values);
 
             expectedTextBox1.Text = String.Format("{0:0.000000}", expectE);

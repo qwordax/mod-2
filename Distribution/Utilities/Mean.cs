@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Distribution.Utilities
 {
     /// <summary>
-    /// Represents a class of computing expectation.
+    /// Represents a class of computing mean.
     /// </summary>
-    public static class Expectation
+    public static class Mean
     {
         public static Double Compute(List<Double> values)
         {

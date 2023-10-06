@@ -12,7 +12,7 @@ namespace Distribution.Utilities
         {
             Double result = 0.0;
 
-            Double expect = Expectation.Compute(values);
+            Double expect = Mean.Compute(values);
 
             foreach (Double value in values)
             {
