@@ -9,15 +9,15 @@ namespace Distribution.Algorithms
         private IRandomable R { get; set; }
 
         private Double E { get; set; }
-        private Double V { get; set; }
+        private Double Sigma { get; set; }
 
         private UInt64 N { get; set; }
 
-        public Gauss(IRandomable r, Double e, Double v, UInt64 n)
+        public Gauss(IRandomable r, Double e, Double sigma, UInt64 n)
         {
             R = r;
             E = e;
-            V = v;
+            Sigma = sigma;
             N = n;
         }
 
@@ -31,7 +31,7 @@ namespace Distribution.Algorithms
             }
 
             temp -= N / 2;
-            temp *= V * Math.Sqrt(12.0 / N);
+            temp *= Sigma * Math.Sqrt(12.0 / N);
 
             return E + temp;
         }

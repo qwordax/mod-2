@@ -39,10 +39,10 @@ namespace Distribution
                 generator = new MPM(19_283_865, 9_817_279_234_659);
             }
 
-            IDistributable distribution = new Uniform(generator, 120, 185);
+            IDistributable distribution = new Uniform(generator, 120.0, 185.0);
 
-            Double expectE = (120 + 185) / 2.0;
-            Double expectV = (185 - 120) * (185 - 120) / 12.0;
+            Double expectE = (120.0 + 185.0) / 2.0;
+            Double expectV = (185.0 - 120.0) * (185.0 - 120.0) / 12.0;
 
             if (distributionButton2.Checked)
             {
@@ -54,34 +54,34 @@ namespace Distribution
 
             if (distributionButton3.Checked)
             {
-                distribution = new Exponential(generator, 14.0);
+                distribution = new Exponential(generator, 4.5);
 
-                expectE = 1 / 14.0;
-                expectV = 1 / (14.0 * 14.0);
+                expectE = 1.0 / 4.5;
+                expectV = 1.0 / (4.5 * 4.5);
             }
 
             if (distributionButton4.Checked)
             {
                 distribution = new Gamma(generator, 14.0, 8);
 
-                expectE = 8 / 14.0;
-                expectV = 8 / (14.0 * 14.0);
+                expectE = 8.0 / 14.0;
+                expectV = 8.0 / (14.0 * 14.0);
             }
 
             if (distributionButton5.Checked)
             {
-                distribution = new Triangle(generator, 75, 200);
+                distribution = new Triangle(generator, 75.0, 200.0);
 
-                expectE = (75 + 200) / 2.0;
-                expectV = (200 - 75) * (200 - 75) / 12.0;
+                expectE = (75.0 + 75.0 + 200.0) / 3.0;
+                expectV = (75.0 * 75.0 + 200.0 * 200.0 - 2 * 75.0 * 200.0) / 18.0;
             }
 
             if (distributionButton6.Checked)
             {
-                distribution = new Simpson(generator, 35, 90);
+                distribution = new Simpson(generator, 35.0, 90.0);
 
-                expectE = (35 + 90) / 2.0;
-                expectV = (90 - 35) * (90 - 35) / 24.0;
+                expectE = (35.0 + 90.0) / 2.0;
+                expectV = (90.0 - 35.0) * (90.0 - 35.0) / 24.0;
             }
 
             UInt64 n = (UInt64)parameterUpDown1.Value;
