@@ -26,12 +26,12 @@ namespace Distribution
         private NumericUpDown parameterUpDown1;
         private NumericUpDown parameterUpDown2;
 
-        private RadioButton distButton1;
-        private RadioButton distButton2;
-        private RadioButton distButton3;
-        private RadioButton distButton4;
-        private RadioButton distButton5;
-        private RadioButton distButton6;
+        private RadioButton distributionButton1;
+        private RadioButton distributionButton2;
+        private RadioButton distributionButton3;
+        private RadioButton distributionButton4;
+        private RadioButton distributionButton5;
+        private RadioButton distributionButton6;
 
         private void InitializeComponent()
         {
@@ -55,12 +55,12 @@ namespace Distribution
             parameterUpDown1 = new NumericUpDown();
             parameterUpDown2 = new NumericUpDown();
 
-            distButton1 = new RadioButton();
-            distButton2 = new RadioButton();
-            distButton3 = new RadioButton();
-            distButton4 = new RadioButton();
-            distButton5 = new RadioButton();
-            distButton6 = new RadioButton();
+            distributionButton1 = new RadioButton();
+            distributionButton2 = new RadioButton();
+            distributionButton3 = new RadioButton();
+            distributionButton4 = new RadioButton();
+            distributionButton5 = new RadioButton();
+            distributionButton6 = new RadioButton();
 
             parameterBox.SuspendLayout();
             expectedBox.SuspendLayout();
@@ -104,14 +104,14 @@ namespace Distribution
             //
             // distributionBox.
             //
-            distributionBox.Controls.AddRange(new RadioButton[]
+            distributionBox.Controls.AddRange(new Control[]
             {
-                distButton1,
-                distButton2,
-                distButton3,
-                distButton4,
-                distButton5,
-                distButton6
+                distributionButton1,
+                distributionButton2,
+                distributionButton3,
+                distributionButton4,
+                distributionButton5,
+                distributionButton6
             });
 
             distributionBox.Location = new Point(5, 305);
@@ -167,7 +167,7 @@ namespace Distribution
             clearButton.Text = "Clear";
 
             //
-            // label1.
+            // parameterLabel1.
             //
             parameterLabel1.Font = new Font(parameterLabel1.Font, FontStyle.Italic);
             parameterLabel1.Location = new Point(5, 25);
@@ -177,7 +177,7 @@ namespace Distribution
             parameterLabel1.TextAlign = ContentAlignment.MiddleLeft;
 
             //
-            // label2.
+            // parameterLabel2.
             //
             parameterLabel2.Font = new Font(parameterLabel2.Font, FontStyle.Italic);
             parameterLabel2.Location = new Point(5, 60);
@@ -187,7 +187,7 @@ namespace Distribution
             parameterLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
-            // upDown1.
+            // parameterUpDown1.
             //
             parameterUpDown1.Location = new Point(70, 25);
             parameterUpDown1.Maximum = 100_000_000;
@@ -198,7 +198,7 @@ namespace Distribution
             parameterUpDown1.Value = 10_000;
 
             //
-            // upDown2.
+            // parameterUpDown2.
             //
             parameterUpDown2.Location = new Point(70, 60);
             parameterUpDown2.Maximum = 1_000;
@@ -209,77 +209,77 @@ namespace Distribution
             parameterUpDown2.Value = 100;
 
             //
-            // distButton1.
+            // distributionButton1.
             //
-            distButton1.Checked = true;
-            distButton1.Font = new Font("Courier New",
+            distributionButton1.Checked = true;
+            distributionButton1.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            distButton1.Location = new Point(5, 25);
-            distButton1.Name = "radioButton1";
-            distButton1.Size = new Size(200, 30);
-            distButton1.Text = "Uniform";
+            distributionButton1.Location = new Point(5, 25);
+            distributionButton1.Name = "radioButton1";
+            distributionButton1.Size = new Size(200, 30);
+            distributionButton1.Text = "Uniform";
 
             //
-            // distButton2.
+            // distributionButton2.
             //
-            distButton2.Font = new Font("Courier New",
+            distributionButton2.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            distButton2.Location = new Point(5, 60);
-            distButton2.Name = "radioButton2";
-            distButton2.Size = new Size(200, 30);
-            distButton2.Text = "Gauss";
+            distributionButton2.Location = new Point(5, 60);
+            distributionButton2.Name = "radioButton2";
+            distributionButton2.Size = new Size(200, 30);
+            distributionButton2.Text = "Gauss";
 
             //
-            // distButton3.
+            // distributionButton3.
             //
-            distButton3.Font = new Font("Courier New",
+            distributionButton3.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            distButton3.Location = new Point(5, 95);
-            distButton3.Name = "radioButton3";
-            distButton3.Size = new Size(200, 30);
-            distButton3.Text = "Exponential";
+            distributionButton3.Location = new Point(5, 95);
+            distributionButton3.Name = "radioButton3";
+            distributionButton3.Size = new Size(200, 30);
+            distributionButton3.Text = "Exponential";
 
             //
-            // distButton4.
+            // distributionButton4.
             //
-            distButton4.Font = new Font("Courier New",
+            distributionButton4.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            distButton4.Location = new Point(5, 130);
-            distButton4.Name = "radioButton4";
-            distButton4.Size = new Size(200, 30);
-            distButton4.Text = "Gamma";
+            distributionButton4.Location = new Point(5, 130);
+            distributionButton4.Name = "radioButton4";
+            distributionButton4.Size = new Size(200, 30);
+            distributionButton4.Text = "Gamma";
 
             //
-            // distButton5.
+            // distributionButton5.
             //
-            distButton5.Font = new Font("Courier New",
+            distributionButton5.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            distButton5.Location = new Point(5, 165);
-            distButton5.Name = "radioButton4";
-            distButton5.Size = new Size(200, 30);
-            distButton5.Text = "Triangle";
+            distributionButton5.Location = new Point(5, 165);
+            distributionButton5.Name = "radioButton4";
+            distributionButton5.Size = new Size(200, 30);
+            distributionButton5.Text = "Triangle";
 
             //
-            // distButton7.
+            // distributionButton6.
             //
-            distButton6.Font = new Font("Courier New",
+            distributionButton6.Font = new Font("Courier New",
                 9,
                 FontStyle.Regular,
                 GraphicsUnit.Point);
-            distButton6.Location = new Point(5, 200);
-            distButton6.Name = "radioButton4";
-            distButton6.Size = new Size(200, 30);
-            distButton6.Text = "Simpson";
+            distributionButton6.Location = new Point(5, 200);
+            distributionButton6.Name = "radioButton4";
+            distributionButton6.Size = new Size(200, 30);
+            distributionButton6.Text = "Simpson";
 
             //
             // MainForm.
@@ -291,7 +291,7 @@ namespace Distribution
             MinimizeBox = false;
             Text = "Distribution";
 
-            Controls.AddRange(new GroupBox[]
+            Controls.AddRange(new Control[]
             {
                 parameterBox,
                 expectedBox,
@@ -303,7 +303,7 @@ namespace Distribution
 
             Controls.Add(checkBox);
 
-            Controls.AddRange(new Button[]
+            Controls.AddRange(new Control[]
             {
                 generateButton,
                 clearButton
