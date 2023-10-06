@@ -29,6 +29,9 @@ namespace Distribution
         private Label expectedLabel1;
         private Label expectedLabel2;
 
+        private Label computedLabel1;
+        private Label computedLabel2;
+
         private RadioButton distributionButton1;
         private RadioButton distributionButton2;
         private RadioButton distributionButton3;
@@ -60,6 +63,9 @@ namespace Distribution
 
             expectedLabel1 = new Label();
             expectedLabel2 = new Label();
+
+            computedLabel1 = new Label();
+            computedLabel2 = new Label();
 
             distributionButton1 = new RadioButton();
             distributionButton2 = new RadioButton();
@@ -108,6 +114,12 @@ namespace Distribution
             //
             // computedBox.
             //
+            computedBox.Controls.AddRange(new Control[]
+            {
+                computedLabel1,
+                computedLabel2
+            });
+
             computedBox.Location = new Point(5, 205);
             computedBox.Name = "computedBox";
             computedBox.Size = new Size(300, 95);
@@ -239,6 +251,26 @@ namespace Distribution
             expectedLabel2.Size = new Size(60, 30);
             expectedLabel2.Text = "V";
             expectedLabel2.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // computedLabel1.
+            //
+            computedLabel1.Font = new Font(computedLabel1.Font, FontStyle.Italic);
+            computedLabel1.Location = new Point(5, 25);
+            computedLabel1.Name = "computedLabel1";
+            computedLabel1.Size = new Size(60, 30);
+            computedLabel1.Text = "E";
+            computedLabel1.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // computedLabel2.
+            //
+            computedLabel2.Font = new Font(computedLabel2.Font, FontStyle.Italic);
+            computedLabel2.Location = new Point(5, 60);
+            computedLabel2.Name = "computedLabel2";
+            computedLabel2.Size = new Size(60, 30);
+            computedLabel2.Text = "V";
+            computedLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
             // distributionButton1.
