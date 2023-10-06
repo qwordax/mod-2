@@ -172,12 +172,19 @@ namespace Distribution
             //
             // chartArea.
             //
+            chartArea.AxisX.MajorGrid.Enabled = false;
+            chartArea.AxisY.Enabled = AxisEnabled.False;
             chartArea.Name = "chartArea";
 
             //
             // chartSeries.
             //
+            chartSeries.ChartArea = "chartArea";
+            chartSeries.Color = Color.Black;
+            chartSeries.IsXValueIndexed = true;
             chartSeries.Name = "chartSeries";
+            chartSeries.XValueType = ChartValueType.UInt64;
+            chartSeries.YValueType = ChartValueType.UInt64;
 
             //
             // checkBox.
@@ -231,7 +238,7 @@ namespace Distribution
             //
             parameterUpDown1.Location = new Point(70, 25);
             parameterUpDown1.Maximum = 100_000_000;
-            parameterUpDown1.Minimum = 100;
+            parameterUpDown1.Minimum = 10;
             parameterUpDown1.Name = "parameterUpDown1";
             parameterUpDown1.Size = new Size(225, 30);
 
