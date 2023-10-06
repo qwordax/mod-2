@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 using Distribution.Algorithms;
 using Distribution.Generators;
+using Distribution.Utilities;
 
 namespace Distribution
 {
@@ -45,6 +46,21 @@ namespace Distribution
                 values.Add(distribution.Next());
             }
 
+            Double expectE = 0.0;
+            Double expectV = 0.0;
+
+            expectE = (10 + 15) / 2.0;
+            expectV = (15 - 10) * (15 - 10) / 12;
+
+            Double computeE = Expectation.Compute(values);
+            Double computeV = Variation.Compute(values);
+
+            expectedTextBox1.Text = String.Format("{0}", expectE);
+            expectedTextBox2.Text = String.Format("{0}", expectV);
+
+            computedTextBox1.Text = String.Format("{0}", computeE);
+            computedTextBox2.Text = String.Format("{0}", computeV);
+
             UInt64 m = (UInt64)parameterUpDown2.Value;
 
             UInt64[] counts = new UInt64[m];
@@ -79,6 +95,12 @@ namespace Distribution
             Text = "Distribution";
 
             chartSeries.Points.Clear();
+
+            expectedTextBox1.Text = "";
+            expectedTextBox2.Text = "";
+
+            computedTextBox1.Text = "";
+            computedTextBox2.Text = "";
         }
     }
 }
