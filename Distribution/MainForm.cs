@@ -70,10 +70,18 @@ namespace Distribution
 
             if (distributionButton5.Checked)
             {
-                distribution = new Triangle(generator, 120, 185);
+                distribution = new Triangle(generator, 75, 200);
 
-                expectE = (120 + 185) / 2.0;
-                expectV = (185 - 120) * (185 - 120) / 12.0;
+                expectE = (75 + 200) / 2.0;
+                expectV = (200 - 75) * (200 - 75) / 12.0;
+            }
+
+            if (distributionButton6.Checked)
+            {
+                distribution = new Simpson(generator, 35, 90);
+
+                expectE = (35 + 90) / 2.0;
+                expectV = (90 - 35) * (90 - 35) / 24.0;
             }
 
             UInt64 n = (UInt64)parameterUpDown1.Value;
