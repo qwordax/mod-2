@@ -26,6 +26,9 @@ namespace Distribution
         private NumericUpDown parameterUpDown1;
         private NumericUpDown parameterUpDown2;
 
+        private Label expectedLabel1;
+        private Label expectedLabel2;
+
         private RadioButton distributionButton1;
         private RadioButton distributionButton2;
         private RadioButton distributionButton3;
@@ -54,6 +57,9 @@ namespace Distribution
 
             parameterUpDown1 = new NumericUpDown();
             parameterUpDown2 = new NumericUpDown();
+
+            expectedLabel1 = new Label();
+            expectedLabel2 = new Label();
 
             distributionButton1 = new RadioButton();
             distributionButton2 = new RadioButton();
@@ -88,6 +94,12 @@ namespace Distribution
             //
             // expectedBox.
             //
+            expectedBox.Controls.AddRange(new Control[]
+            {
+                expectedLabel1,
+                expectedLabel2
+            });
+
             expectedBox.Location = new Point(5, 105);
             expectedBox.Name = "expectedBox";
             expectedBox.Size = new Size(300, 95);
@@ -171,7 +183,7 @@ namespace Distribution
             //
             parameterLabel1.Font = new Font(parameterLabel1.Font, FontStyle.Italic);
             parameterLabel1.Location = new Point(5, 25);
-            parameterLabel1.Name = "label1";
+            parameterLabel1.Name = "parameterLabel1";
             parameterLabel1.Size = new Size(60, 30);
             parameterLabel1.Text = "N";
             parameterLabel1.TextAlign = ContentAlignment.MiddleLeft;
@@ -181,7 +193,7 @@ namespace Distribution
             //
             parameterLabel2.Font = new Font(parameterLabel2.Font, FontStyle.Italic);
             parameterLabel2.Location = new Point(5, 60);
-            parameterLabel2.Name = "label2";
+            parameterLabel2.Name = "parameterLabel2";
             parameterLabel2.Size = new Size(60, 30);
             parameterLabel2.Text = "M";
             parameterLabel2.TextAlign = ContentAlignment.MiddleLeft;
@@ -192,7 +204,7 @@ namespace Distribution
             parameterUpDown1.Location = new Point(70, 25);
             parameterUpDown1.Maximum = 100_000_000;
             parameterUpDown1.Minimum = 100;
-            parameterUpDown1.Name = "upDown1";
+            parameterUpDown1.Name = "parameterUpDown1";
             parameterUpDown1.Size = new Size(225, 30);
 
             parameterUpDown1.Value = 10_000;
@@ -203,10 +215,30 @@ namespace Distribution
             parameterUpDown2.Location = new Point(70, 60);
             parameterUpDown2.Maximum = 1_000;
             parameterUpDown2.Minimum = 10;
-            parameterUpDown2.Name = "upDown2";
+            parameterUpDown2.Name = "parameterUpDown2";
             parameterUpDown2.Size = new Size(225, 30);
 
             parameterUpDown2.Value = 100;
+
+            //
+            // expectedLabel1.
+            //
+            expectedLabel1.Font = new Font(expectedLabel1.Font, FontStyle.Italic);
+            expectedLabel1.Location = new Point(5, 25);
+            expectedLabel1.Name = "expectedLabel1";
+            expectedLabel1.Size = new Size(60, 30);
+            expectedLabel1.Text = "E";
+            expectedLabel1.TextAlign = ContentAlignment.MiddleLeft;
+
+            //
+            // expectedLabel2.
+            //
+            expectedLabel2.Font = new Font(expectedLabel2.Font, FontStyle.Italic);
+            expectedLabel2.Location = new Point(5, 60);
+            expectedLabel2.Name = "expectedLabel2";
+            expectedLabel2.Size = new Size(60, 30);
+            expectedLabel2.Text = "V";
+            expectedLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
             // distributionButton1.
@@ -217,7 +249,7 @@ namespace Distribution
                 FontStyle.Regular,
                 GraphicsUnit.Point);
             distributionButton1.Location = new Point(5, 25);
-            distributionButton1.Name = "radioButton1";
+            distributionButton1.Name = "distributionButton1";
             distributionButton1.Size = new Size(200, 30);
             distributionButton1.Text = "Uniform";
 
@@ -229,7 +261,7 @@ namespace Distribution
                 FontStyle.Regular,
                 GraphicsUnit.Point);
             distributionButton2.Location = new Point(5, 60);
-            distributionButton2.Name = "radioButton2";
+            distributionButton2.Name = "distributionButton2";
             distributionButton2.Size = new Size(200, 30);
             distributionButton2.Text = "Gauss";
 
@@ -241,7 +273,7 @@ namespace Distribution
                 FontStyle.Regular,
                 GraphicsUnit.Point);
             distributionButton3.Location = new Point(5, 95);
-            distributionButton3.Name = "radioButton3";
+            distributionButton3.Name = "distributionButton3";
             distributionButton3.Size = new Size(200, 30);
             distributionButton3.Text = "Exponential";
 
@@ -253,7 +285,7 @@ namespace Distribution
                 FontStyle.Regular,
                 GraphicsUnit.Point);
             distributionButton4.Location = new Point(5, 130);
-            distributionButton4.Name = "radioButton4";
+            distributionButton4.Name = "distributionButton4";
             distributionButton4.Size = new Size(200, 30);
             distributionButton4.Text = "Gamma";
 
@@ -265,7 +297,7 @@ namespace Distribution
                 FontStyle.Regular,
                 GraphicsUnit.Point);
             distributionButton5.Location = new Point(5, 165);
-            distributionButton5.Name = "radioButton4";
+            distributionButton5.Name = "distributionButton5";
             distributionButton5.Size = new Size(200, 30);
             distributionButton5.Text = "Triangle";
 
@@ -277,7 +309,7 @@ namespace Distribution
                 FontStyle.Regular,
                 GraphicsUnit.Point);
             distributionButton6.Location = new Point(5, 200);
-            distributionButton6.Name = "radioButton4";
+            distributionButton6.Name = "distributionButton6";
             distributionButton6.Size = new Size(200, 30);
             distributionButton6.Text = "Simpson";
 
