@@ -20,8 +20,8 @@ namespace Distribution
         private Button generateButton;
         private Button clearButton;
 
-        private Label label1;
-        private Label label2;
+        private Label parameterLabel1;
+        private Label parameterLabel2;
 
         private NumericUpDown upDown1;
         private NumericUpDown upDown2;
@@ -49,8 +49,8 @@ namespace Distribution
             generateButton = new Button();
             clearButton = new Button();
 
-            label1 = new Label();
-            label2 = new Label();
+            parameterLabel1 = new Label();
+            parameterLabel2 = new Label();
 
             upDown1 = new NumericUpDown();
             upDown2 = new NumericUpDown();
@@ -74,8 +74,8 @@ namespace Distribution
             //
             parameterBox.Controls.AddRange(new Control[]
             {
-                label1,
-                label2,
+                parameterLabel1,
+                parameterLabel2,
                 upDown1,
                 upDown2
             });
@@ -169,22 +169,22 @@ namespace Distribution
             //
             // label1.
             //
-            label1.Font = new Font(label1.Font, FontStyle.Italic);
-            label1.Location = new Point(5, 25);
-            label1.Name = "label1";
-            label1.Size = new Size(60, 30);
-            label1.Text = "N";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            parameterLabel1.Font = new Font(parameterLabel1.Font, FontStyle.Italic);
+            parameterLabel1.Location = new Point(5, 25);
+            parameterLabel1.Name = "label1";
+            parameterLabel1.Size = new Size(60, 30);
+            parameterLabel1.Text = "N";
+            parameterLabel1.TextAlign = ContentAlignment.MiddleLeft;
 
             //
             // label2.
             //
-            label2.Font = new Font(label2.Font, FontStyle.Italic);
-            label2.Location = new Point(5, 60);
-            label2.Name = "label2";
-            label2.Size = new Size(60, 30);
-            label2.Text = "M";
-            label2.TextAlign = ContentAlignment.MiddleLeft;
+            parameterLabel2.Font = new Font(parameterLabel2.Font, FontStyle.Italic);
+            parameterLabel2.Location = new Point(5, 60);
+            parameterLabel2.Name = "label2";
+            parameterLabel2.Size = new Size(60, 30);
+            parameterLabel2.Text = "M";
+            parameterLabel2.TextAlign = ContentAlignment.MiddleLeft;
 
             //
             // upDown1.
