@@ -46,10 +46,10 @@ namespace Distribution
 
             if (distributionButton2.Checked)
             {
-                distribution = new Gauss(generator, 10, 2, 6);
+                distribution = new Gauss(generator, 10.0, 3.0, 12);
 
                 expectE = 10.0;
-                expectV = 2.0;
+                expectV = 9.0;
             }
 
             UInt64 n = (UInt64)parameterUpDown1.Value;

@@ -27,11 +27,11 @@ namespace Distribution.Algorithms
 
             for (UInt64 i = 0; i < N; i++)
             {
-                temp += R.Next();
+                temp += (Double)R.Next() / UInt64.MaxValue;
             }
 
             temp -= N / 2;
-            temp *= V * Math.Sqrt(12 / N);
+            temp *= V * Math.Sqrt(12.0 / N);
 
             return E + temp;
         }
