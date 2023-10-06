@@ -37,7 +37,7 @@ namespace Distribution
                 generator = new LFSR(UInt64.MaxValue - 103_875_636_285);
             }
 
-            IDistributable distribution = new Uniform(generator, 10, 15);
+            IDistributable distribution = new Uniform(generator, 120, 185);
 
             UInt64 n = (UInt64)parameterUpDown1.Value;
 
@@ -46,20 +46,17 @@ namespace Distribution
                 values.Add(distribution.Next());
             }
 
-            Double expectE = 0.0;
-            Double expectV = 0.0;
-
-            expectE = (10 + 15) / 2.0;
-            expectV = (15 - 10) * (15 - 10) / 12;
+            Double expectE = (120 + 185) / 2.0;
+            Double expectV = (185 - 120) * (185 - 120) / 12.0;
 
             Double computeE = Expectation.Compute(values);
             Double computeV = Variation.Compute(values);
 
-            expectedTextBox1.Text = String.Format("{0}", expectE);
-            expectedTextBox2.Text = String.Format("{0}", expectV);
+            expectedTextBox1.Text = String.Format("{0:.000000}", expectE);
+            expectedTextBox2.Text = String.Format("{0:.000000}", expectV);
 
-            computedTextBox1.Text = String.Format("{0}", computeE);
-            computedTextBox2.Text = String.Format("{0}", computeV);
+            computedTextBox1.Text = String.Format("{0:.000000}", computeE);
+            computedTextBox2.Text = String.Format("{0:.000000}", computeV);
 
             UInt64 m = (UInt64)parameterUpDown2.Value;
 
