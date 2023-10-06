@@ -6,7 +6,7 @@ namespace Distribution.Generators
     /// Represents a pseudorandom number generator based on
     /// the linear feedback shift register.
     /// </summary>
-    public class LFSR
+    public class LFSR : IRandomable
     {
         private UInt64 X { get; set; }
 

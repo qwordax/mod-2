@@ -7,7 +7,7 @@ namespace Distribution.Generators
     /// Represents a pseudorandom number generator based on
     /// the middle-product method.
     /// </summary>
-    public class MPM
+    public class MPM : IRandomable
     {
         private BigInteger R0 { get; set; }
         private BigInteger R1 { get; set; }
