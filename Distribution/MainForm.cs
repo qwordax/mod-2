@@ -30,14 +30,27 @@ namespace Distribution
 
             List<Double> values = new List<Double>();
 
-            IRandomable generator = new MPM(19_283_865, 9_817_279_234_659);
+            IRandomable generator = new Lehmer(36_786_549,
+                UInt64.MaxValue - 1_576,
+                5_542_985_019_385);
 
             if (generatorButton2.Checked)
             {
-                generator = new LFSR(UInt64.MaxValue - 103_875_636_285);
+                generator = new MPM(19_283_865, 9_817_279_234_659);
             }
 
             IDistributable distribution = new Uniform(generator, 120, 185);
+
+            Double expectE = (120 + 185) / 2.0;
+            Double expectV = (185 - 120) * (185 - 120) / 12.0;
+
+            if (distributionButton2.Checked)
+            {
+                distribution = new Gauss(generator, 10, 2, 6);
+
+                expectE = 10.0;
+                expectV = 2.0;
+            }
 
             UInt64 n = (UInt64)parameterUpDown1.Value;
 
@@ -45,9 +58,6 @@ namespace Distribution
             {
                 values.Add(distribution.Next());
             }
-
-            Double expectE = (120 + 185) / 2.0;
-            Double expectV = (185 - 120) * (185 - 120) / 12.0;
 
             Double computeE = Expectation.Compute(values);
             Double computeV = Variation.Compute(values);

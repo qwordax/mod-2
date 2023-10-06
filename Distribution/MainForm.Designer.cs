@@ -365,7 +365,7 @@ namespace Distribution
             generatorButton1.Location = new Point(5, 25);
             generatorButton1.Name = "generatorButton1";
             generatorButton1.Size = new Size(200, 30);
-            generatorButton1.Text = "MPM";
+            generatorButton1.Text = "Lehmer";
 
             //
             // generatorButton2.
@@ -377,7 +377,7 @@ namespace Distribution
             generatorButton2.Location = new Point(5, 60);
             generatorButton2.Name = "generatorButton2";
             generatorButton2.Size = new Size(200, 30);
-            generatorButton2.Text = "LFSR";
+            generatorButton2.Text = "MPM";
 
             //
             // distributionButton1.
