@@ -46,10 +46,18 @@ namespace Distribution
 
             if (distributionButton2.Checked)
             {
-                distribution = new Gauss(generator, 10.0, 3.0, 12);
+                distribution = new Gauss(generator, 132.0, 8.0, 12);
 
-                expectE = 10.0;
-                expectV = 9.0;
+                expectE = 132.0;
+                expectV = 8.0 * 8.0;
+            }
+
+            if (distributionButton3.Checked)
+            {
+                distribution = new Exponential(generator, 14.0);
+
+                expectE = 1 / 14.0;
+                expectV = 1 / (14.0 * 14.0);
             }
 
             UInt64 n = (UInt64)parameterUpDown1.Value;
@@ -62,11 +70,11 @@ namespace Distribution
             Double computeE = Expectation.Compute(values);
             Double computeV = Variation.Compute(values);
 
-            expectedTextBox1.Text = String.Format("{0:.000000}", expectE);
-            expectedTextBox2.Text = String.Format("{0:.000000}", expectV);
+            expectedTextBox1.Text = String.Format("{0:0.000000}", expectE);
+            expectedTextBox2.Text = String.Format("{0:0.000000}", expectV);
 
-            computedTextBox1.Text = String.Format("{0:.000000}", computeE);
-            computedTextBox2.Text = String.Format("{0:.000000}", computeV);
+            computedTextBox1.Text = String.Format("{0:0.000000}", computeE);
+            computedTextBox2.Text = String.Format("{0:0.000000}", computeV);
 
             UInt64 m = (UInt64)parameterUpDown2.Value;
 
