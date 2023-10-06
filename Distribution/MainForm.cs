@@ -68,6 +68,14 @@ namespace Distribution
                 expectV = 8 / (14.0 * 14.0);
             }
 
+            if (distributionButton5.Checked)
+            {
+                distribution = new Triangle(generator, 120, 185);
+
+                expectE = (120 + 185) / 2.0;
+                expectV = (185 - 120) * (185 - 120) / 12.0;
+            }
+
             UInt64 n = (UInt64)parameterUpDown1.Value;
 
             for (UInt64 i = 0; i < n; i++)
