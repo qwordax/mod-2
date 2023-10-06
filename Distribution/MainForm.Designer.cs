@@ -39,6 +39,9 @@ namespace Distribution
         private TextBox computedTextBox1;
         private TextBox computedTextBox2;
 
+        private RadioButton generatorButton1;
+        private RadioButton generatorButton2;
+
         private RadioButton distributionButton1;
         private RadioButton distributionButton2;
         private RadioButton distributionButton3;
@@ -80,6 +83,9 @@ namespace Distribution
 
             computedTextBox1 = new TextBox();
             computedTextBox2 = new TextBox();
+
+            generatorButton1 = new RadioButton();
+            generatorButton2 = new RadioButton();
 
             distributionButton1 = new RadioButton();
             distributionButton2 = new RadioButton();
@@ -147,6 +153,12 @@ namespace Distribution
             //
             // generatorBox.
             //
+            generatorBox.Controls.AddRange(new Control[]
+            {
+                generatorButton1,
+                generatorButton2
+            });
+
             generatorBox.Location = new Point(5, 305);
             generatorBox.Name = "generatorBox";
             generatorBox.Size = new Size(300, 95);
@@ -341,6 +353,31 @@ namespace Distribution
             computedTextBox2.ReadOnly = true;
             computedTextBox2.Size = new Size(225, 30);
             computedTextBox2.TabStop = false;
+
+            //
+            // generatorButton1.
+            //
+            generatorButton1.Checked = true;
+            generatorButton1.Font = new Font("Courier New",
+                9,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+            generatorButton1.Location = new Point(5, 25);
+            generatorButton1.Name = "generatorButton1";
+            generatorButton1.Size = new Size(200, 30);
+            generatorButton1.Text = "MPM";
+
+            //
+            // generatorButton2.
+            //
+            generatorButton2.Font = new Font("Courier New",
+                9,
+                FontStyle.Regular,
+                GraphicsUnit.Point);
+            generatorButton2.Location = new Point(5, 60);
+            generatorButton2.Name = "generatorButton2";
+            generatorButton2.Size = new Size(200, 30);
+            generatorButton2.Text = "LFSR";
 
             //
             // distributionButton1.
