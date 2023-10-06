@@ -23,8 +23,8 @@ namespace Distribution
         private Label parameterLabel1;
         private Label parameterLabel2;
 
-        private NumericUpDown upDown1;
-        private NumericUpDown upDown2;
+        private NumericUpDown parameterUpDown1;
+        private NumericUpDown parameterUpDown2;
 
         private RadioButton distButton1;
         private RadioButton distButton2;
@@ -52,8 +52,8 @@ namespace Distribution
             parameterLabel1 = new Label();
             parameterLabel2 = new Label();
 
-            upDown1 = new NumericUpDown();
-            upDown2 = new NumericUpDown();
+            parameterUpDown1 = new NumericUpDown();
+            parameterUpDown2 = new NumericUpDown();
 
             distButton1 = new RadioButton();
             distButton2 = new RadioButton();
@@ -76,8 +76,8 @@ namespace Distribution
             {
                 parameterLabel1,
                 parameterLabel2,
-                upDown1,
-                upDown2
+                parameterUpDown1,
+                parameterUpDown2
             });
 
             parameterBox.Location = new Point(5, 5);
@@ -189,24 +189,24 @@ namespace Distribution
             //
             // upDown1.
             //
-            upDown1.Location = new Point(70, 25);
-            upDown1.Maximum = 100_000_000;
-            upDown1.Minimum = 100;
-            upDown1.Name = "upDown1";
-            upDown1.Size = new Size(225, 30);
+            parameterUpDown1.Location = new Point(70, 25);
+            parameterUpDown1.Maximum = 100_000_000;
+            parameterUpDown1.Minimum = 100;
+            parameterUpDown1.Name = "upDown1";
+            parameterUpDown1.Size = new Size(225, 30);
 
-            upDown1.Value = 10_000;
+            parameterUpDown1.Value = 10_000;
 
             //
             // upDown2.
             //
-            upDown2.Location = new Point(70, 60);
-            upDown2.Maximum = 1_000;
-            upDown2.Minimum = 10;
-            upDown2.Name = "upDown2";
-            upDown2.Size = new Size(225, 30);
+            parameterUpDown2.Location = new Point(70, 60);
+            parameterUpDown2.Maximum = 1_000;
+            parameterUpDown2.Minimum = 10;
+            parameterUpDown2.Name = "upDown2";
+            parameterUpDown2.Size = new Size(225, 30);
 
-            upDown2.Value = 100;
+            parameterUpDown2.Value = 100;
 
             //
             // distButton1.
