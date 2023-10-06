@@ -4,6 +4,10 @@ using Distribution.Generators;
 
 namespace Distribution.Algorithms
 {
+    /// <summary>
+    /// Represents a pseudorandom number generator based on
+    /// the Gauss distribution.
+    /// </summary>
     public class Gauss : IDistributable
     {
         private IRandomable R { get; set; }

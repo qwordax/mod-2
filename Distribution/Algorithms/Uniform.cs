@@ -4,6 +4,10 @@ using Distribution.Generators;
 
 namespace Distribution.Algorithms
 {
+    /// <summary>
+    /// Represents a pseudorandom number generator based on
+    /// the uniform distribution.
+    /// </summary>
     public class Uniform : IDistributable
     {
         private IRandomable R { get; set; }

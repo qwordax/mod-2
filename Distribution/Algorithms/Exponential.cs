@@ -4,6 +4,10 @@ using Distribution.Generators;
 
 namespace Distribution.Algorithms
 {
+    /// <summary>
+    /// Represents a pseudorandom number generator based on
+    /// the exponential distribution.
+    /// </summary>
     public class Exponential : IDistributable
     {
         private IRandomable R { get; set; }

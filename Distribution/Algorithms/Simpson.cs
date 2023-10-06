@@ -4,6 +4,10 @@ using Distribution.Generators;
 
 namespace Distribution.Algorithms
 {
+    /// <summary>
+    /// Represents a pseudorandom number generator based on
+    /// the Simpson distribution.
+    /// </summary>
     public class Simpson : IDistributable
     {
         private Uniform R { get; set; }
