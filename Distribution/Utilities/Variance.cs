@@ -4,9 +4,9 @@ using System.Collections.Generic;
 namespace Distribution.Utilities
 {
     /// <summary>
-    /// Represents a class of computing variation.
+    /// Represents a class of computing variance.
     /// </summary>
-    public static class Variation
+    public static class Variance
     {
         public static Double Compute(List<Double> values)
         {
