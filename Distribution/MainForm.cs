@@ -41,14 +41,14 @@ namespace Distribution
 
             IDistributable distribution = new Uniform(generator, 120.0, 185.0);
 
-            Double expectE = (120.0 + 185.0) / 2.0;
+            Double expectM = (120.0 + 185.0) / 2.0;
             Double expectV = (185.0 - 120.0) * (185.0 - 120.0) / 12.0;
 
             if (distributionButton2.Checked)
             {
                 distribution = new Gauss(generator, 132.0, 8.0, 12);
 
-                expectE = 132.0;
+                expectM = 132.0;
                 expectV = 8.0 * 8.0;
             }
 
@@ -56,7 +56,7 @@ namespace Distribution
             {
                 distribution = new Exponential(generator, 4.5);
 
-                expectE = 1.0 / 4.5;
+                expectM = 1.0 / 4.5;
                 expectV = 1.0 / (4.5 * 4.5);
             }
 
@@ -64,7 +64,7 @@ namespace Distribution
             {
                 distribution = new Gamma(generator, 14.0, 8);
 
-                expectE = 8.0 / 14.0;
+                expectM = 8.0 / 14.0;
                 expectV = 8.0 / (14.0 * 14.0);
             }
 
@@ -72,7 +72,7 @@ namespace Distribution
             {
                 distribution = new Triangular(generator, 75.0, 200.0);
 
-                expectE = (75.0 + 75.0 + 200.0) / 3.0;
+                expectM = (75.0 + 75.0 + 200.0) / 3.0;
                 expectV = (75.0 * 75.0 + 200.0 * 200.0 - 2 * 75.0 * 200.0) / 18.0;
             }
 
@@ -80,7 +80,7 @@ namespace Distribution
             {
                 distribution = new Simpson(generator, 35.0, 90.0);
 
-                expectE = (35.0 + 90.0) / 2.0;
+                expectM = (35.0 + 90.0) / 2.0;
                 expectV = (90.0 - 35.0) * (90.0 - 35.0) / 24.0;
             }
 
@@ -94,7 +94,7 @@ namespace Distribution
             Double computeE = Mean.Compute(values);
             Double computeV = Variance.Compute(values);
 
-            expectedTextBox1.Text = String.Format("{0:0.000000}", expectE);
+            expectedTextBox1.Text = String.Format("{0:0.000000}", expectM);
             expectedTextBox2.Text = String.Format("{0:0.000000}", expectV);
 
             computedTextBox1.Text = String.Format("{0:0.000000}", computeE);
