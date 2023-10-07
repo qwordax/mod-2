@@ -4,10 +4,20 @@ Generation of random numbers with a specified distribution.
 
 # Description
 
-Using generators (two generators of your choice) of uniformly distributed
-pseudorandom numbers from [mod-1](https://github.com/qwordax/mod-1), create
-generators of pseudorandom numbers with distribution laws 1–6 (two generators
-per law).
+Using generators of uniformly distributed pseudorandom numbers create
+generators of pseudorandom numbers with distribution laws:
+
+1. Uniform distribution.
+
+2. Gauss distribution.
+
+3. Exponential distribution.
+
+4. Gamma distribution.
+
+5. Triangular distribution.
+
+6. Simpson distribution.
 
 Compare the obtained data from the two generators for each distribution law:
 
