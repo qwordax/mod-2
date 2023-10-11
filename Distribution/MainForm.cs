@@ -30,23 +30,29 @@ namespace Distribution
 
             List<Double> values = new List<Double>();
 
-            IRandomable generator = new Lehmer(36_786_549,
-                UInt64.MaxValue - 1_576,
-                5_542_985_019_385);
+            IRandomable generator = new Lehmer(a: 36_786_549,
+                m: UInt64.MaxValue - 1_576,
+                x: 5_542_985_019_385);
 
             if (generatorButton2.Checked)
             {
-                generator = new MPM(19_283_865, 9_817_279_234_659);
+                generator = new MPM(r0: 19_283_865,
+                    r1: 9_817_279_234_659);
             }
 
-            IDistributable distribution = new Uniform(generator, 120.0, 185.0);
+            IDistributable distribution = new Uniform(generator,
+                a: 120.0,
+                b: 185.0);
 
             Double expectM = (120.0 + 185.0) / 2.0;
             Double expectV = (185.0 - 120.0) * (185.0 - 120.0) / 12.0;
 
             if (distributionButton2.Checked)
             {
-                distribution = new Gauss(generator, 132.0, 8.0, 12);
+                distribution = new Gauss(generator,
+                    m: 132.0,
+                    sigma: 8.0,
+                    n: 12);
 
                 expectM = 132.0;
                 expectV = 8.0 * 8.0;
@@ -54,7 +60,8 @@ namespace Distribution
 
             if (distributionButton3.Checked)
             {
-                distribution = new Exponential(generator, 4.5);
+                distribution = new Exponential(generator,
+                    lambda: 4.5);
 
                 expectM = 1.0 / 4.5;
                 expectV = 1.0 / (4.5 * 4.5);
@@ -62,7 +69,9 @@ namespace Distribution
 
             if (distributionButton4.Checked)
             {
-                distribution = new Gamma(generator, 14.0, 8);
+                distribution = new Gamma(generator,
+                    lambda: 14.0,
+                    eta: 8);
 
                 expectM = 8.0 / 14.0;
                 expectV = 8.0 / (14.0 * 14.0);
@@ -70,7 +79,9 @@ namespace Distribution
 
             if (distributionButton5.Checked)
             {
-                distribution = new Triangular(generator, 75.0, 200.0);
+                distribution = new Triangular(generator,
+                    a: 75.0,
+                    b: 200.0);
 
                 expectM = (75.0 + 75.0 + 200.0) / 3.0;
                 expectV = (75.0 * 75.0 + 200.0 * 200.0 - 2 * 75.0 * 200.0) / 18.0;
@@ -78,7 +89,9 @@ namespace Distribution
 
             if (distributionButton6.Checked)
             {
-                distribution = new Simpson(generator, 35.0, 90.0);
+                distribution = new Simpson(generator,
+                    a: 35.0,
+                    b: 90.0);
 
                 expectM = (35.0 + 90.0) / 2.0;
                 expectV = (90.0 - 35.0) * (90.0 - 35.0) / 24.0;
