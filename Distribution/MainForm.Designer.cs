@@ -213,9 +213,9 @@ namespace Distribution
             // checkBox.
             //
             checkBox.CheckedChanged += CheckBoxCheckedChange;
-            checkBox.Location = new Point(5, 715);
+            checkBox.Location = new Point(10, 715);
             checkBox.Name = "checkBox";
-            checkBox.Size = new Size(300, 30);
+            checkBox.Size = new Size(295, 30);
             checkBox.Text = "Show Labels";
 
             //
