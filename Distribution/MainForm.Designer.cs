@@ -189,7 +189,7 @@ namespace Distribution
             chart.Location = new Point(310, 15);
             chart.Name = "chart";
             chart.Series.Add(chartSeries);
-            chart.Size = new Size(885, 695);
+            chart.Size = new Size(985, 695);
             chart.TabStop = false;
 
             //
@@ -224,16 +224,16 @@ namespace Distribution
             generateButton.Click += GenerateButtonClick;
             generateButton.Location = new Point(310, 715);
             generateButton.Name = "generateButton";
-            generateButton.Size = new Size(440, 30);
+            generateButton.Size = new Size(490, 30);
             generateButton.Text = "Generate";
 
             //
             // clearButton.
             //
             clearButton.Click += ClearButtonClick;
-            clearButton.Location = new Point(755, 715);
+            clearButton.Location = new Point(805, 715);
             clearButton.Name = "clearButton";
-            clearButton.Size = new Size(440, 30);
+            clearButton.Size = new Size(490, 30);
             clearButton.Text = "Clear";
 
             //
@@ -464,7 +464,7 @@ namespace Distribution
             // MainForm.
             //
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 750);
+            ClientSize = new Size(1300, 750);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
