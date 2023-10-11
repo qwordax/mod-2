@@ -280,7 +280,7 @@ namespace Distribution
             parameterUpDown2.TextAlign = HorizontalAlignment.Right;
             parameterUpDown2.UpDownAlign = LeftRightAlignment.Left;
 
-            parameterUpDown2.Value = 100;
+            parameterUpDown2.Value = 256;
 
             //
             // expectedLabel1.
